@@ -5,3 +5,5 @@ samples/
 fixtures/
 data/
 .env
+data.tar.gz
+._data

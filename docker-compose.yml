@@ -1,14 +1,19 @@
 version: '3'
 services:
+  redis:
+    image: 'redis:latest'
+    restart: always
   db:
     image: 'mongo'
     ports:
       - '27017:27017'
     volumes:
       - ./data:/data/db
+    restart: always
   product-server:
     build: .
     depends_on:
       - db
     ports:
       - '5000:5000'
+    restart: always

@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URL}/test`);
+// mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URL}/test`);
+mongoose.connect('mongodb://db:27017/test');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:')); //eslint-disable-line
